@@ -177,8 +177,8 @@ footer{
    display: flex;
     gap: 100px;
 }
-.footer-collum{
-width: 100%;
+.footer-column{
+width: 50%;
 }
 footer input[type="text"], footer input[type="email"],footer textarea{
 display: block;
@@ -195,11 +195,16 @@ width: 100%;
     display: none;
 }
 @media screen and (max-width:576px){
-    .skills-container{
+    .skills-container, .resume-container, .footer-container{
         flex-direction: column;
     }
-}
-/* design for tablet */
-@media screen and (min-width:576px) and (max-width:992px){
-
+    footer{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"], footer input[type="email"],footer textarea{
+        width:  calc((100% - 40px));;
+    }
 }
